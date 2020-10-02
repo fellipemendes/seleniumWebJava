@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Utils_A {
+public class UtilsA {
 
     pages1 basesPage;
     PrincipalPage pginicial;
@@ -18,7 +18,7 @@ public class Utils_A {
     ExtractionsName extractionsName;
     static String[] siglasEstados ={"AC","AL","AP","AM","BA","CE","DF","ES","GO","MA","MT","MS","MG","PA","PB","PR","PE","PI","RJ","RN","RS","RO","RR","SC","SP","SE","TO"};
 
-    public Utils_A(
+    public UtilsA(
             pages1 basesPage,
             PrincipalPage pginicial,
             Utils utils,
