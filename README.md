@@ -28,3 +28,8 @@ mvn clean install -Dmaven.test.skip=true
 3. A definação de execução virá a partir do arquivo feature para definir se será DOCKER_CHROME (Selenium Grid) ou CHROME (execução local)
 4. Executar a classe com/common/utils/RunnerClass/Runner.java que irá executar os testes de acordo com os arquivos features e tags definidos na configuraçao da classe.
 5. Será gerado um relatório na pasta cucumber-html-reports ao final da execução.
+
+## Proposta
+ - O projeto visa utilizar Selenium + Java + Cucumber para automação Web. Também está preparado para uma possível necessidade de gerar um JAR para a execução dos testes.
+ - Está configurado para execução no Hub do Selenium GRID (local ou exposto na web/rede).
+ - Possui algumas classes de apoio que métodos que auxiliam o desenvolvimento para deixar os steps mais enxutos e de fácil entendimento.
