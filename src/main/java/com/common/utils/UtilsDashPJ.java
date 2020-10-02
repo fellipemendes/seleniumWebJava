@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class UtilsDashPJ {
+public class Utils_A {
 
     pages1 basesPage;
     PrincipalPage pginicial;
@@ -18,7 +18,7 @@ public class UtilsDashPJ {
     ExtractionsName extractionsName;
     static String[] siglasEstados ={"AC","AL","AP","AM","BA","CE","DF","ES","GO","MA","MT","MS","MG","PA","PB","PR","PE","PI","RJ","RN","RS","RO","RR","SC","SP","SE","TO"};
 
-    public UtilsDashPJ(
+    public Utils_A(
             pages1 basesPage,
             PrincipalPage pginicial,
             Utils utils,
@@ -37,7 +37,7 @@ public class UtilsDashPJ {
         this.extractionsName = extractionsName;
     }
 
-    public void validarPortfolioEmpresaPagina() throws Throwable {
+    public void Validar_1() throws Throwable {
         utils.waitElement(pages4.cmbBase);
         assertThat("Base")
                 .isEqualTo(utils.returnTextElement("xpath", "//div[@class='card-select overlapping']//p[contains(text(),'Base')]"));
@@ -57,9 +57,9 @@ public class UtilsDashPJ {
         assertThat(pages4.btnUpBaseFromDashboard.isDisplayed());
     }
 
-    public void validarDashboardClientCarregado() throws Throwable {
+    public void Validar_2() throws Throwable {
         utils.waitElement(pages4.bntDownloadPDFDashboard);
-        Log.info("Validar Dashboard Cliente");
+        Log.info("Validar Dash");
 
         assertThat(utils.returnTextElement("xpath", "//span[@class='line__text']")).contains("filtrados de um total de ");
         assertThat(utils.returnTextElement("xpath", "//span[@class='line__text']")).contains("CNPJs");
@@ -116,8 +116,8 @@ public class UtilsDashPJ {
     }
 
 
-    public void validarTransacoesDisponiveis(){
-        Log.info("Validar as transações");
+    public void Validar_3(){
+        Log.info("Validar as");
         String bundle = getLocalStorage.getObjectBundle("bundle_pj");
         assertThat(extractionPage.chkScoreEmpresa.isDisplayed());
         assertThat(extractionPage.chkScoreEmpresa.isSelected()).isFalse();
@@ -143,7 +143,7 @@ public class UtilsDashPJ {
         assertThat(extractionPage.btnExtracao.isEnabled()).isFalse();
     }
 
-    public void validarFiltrosElementos() throws Throwable {
+    public void Validar_4() throws Throwable {
         pages4.btnFiltros.click();
         utils.waitElement(pages4.btnAplicarFiltro);
         validarPontuacaoDeRiscoFiltro();
@@ -164,7 +164,7 @@ public class UtilsDashPJ {
         assertThat(pages3.chkEstadoSemInformacoes.isSelected()).isTrue();
         pages3.cmbEstados.click();
 
-        Log.info("Validar presença dos filtros de CNAE");
+        Log.info("Validar presença dos filtros de");
         pages3.cmbCNAE.click();
         utils.waitElement(pages3.chkCnaeTodos);
         assertThat(pages3.chkCnaeTodos.isDisplayed());
@@ -180,7 +180,7 @@ public class UtilsDashPJ {
         pages3.cmbCNAE.click();
     }
 
-    public void validarPontuacaoDeRiscoFiltro() throws Throwable {
+    public void Validar_5() throws Throwable {
         Log.info("Validar presença dos filtros de X");
         pages3.cmbPontuRiscoFiltros.click();
         utils.waitElement(pages3.chkPontuRiscoTodos);
@@ -201,8 +201,8 @@ public class UtilsDashPJ {
         pages3.cmbPontuRiscoFiltros.click();
     }
 
-    public void validarFaturamentoPresumidoFiltro() throws Throwable {
-        Log.info("Validar presença dos filtros de Faturamento Presumido");
+    public void Validar_6() throws Throwable {
+        Log.info("Validar presença dos filtros de ");
         pages3.cmbFaturamentoPresumido.click();
         utils.waitElement(pages3.chkFatPresumidoTodos);
         assertThat(pages3.chkFatPresumidoTodos.isDisplayed());
